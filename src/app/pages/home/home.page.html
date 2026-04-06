@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>QuizFlow</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Choose a Category</h2>
+
+  <div class="category-grid">
+    <div
+      *ngFor="let category of categories"
+      class="category-card"
+      [class.selected]="selectedCategory?.id === category.id"
+      (click)="selectCategory(category)"
+      >
+      <p>{{ category.name }}</p>
+      </div>
+  </div>
+  </ion-content>
