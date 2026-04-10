@@ -33,4 +33,15 @@ export const routes: Routes = [
     redirectTo: '/tabs/home',
     pathMatch: 'full',
   },
+  
+  {
+  path: 'quiz',
+  loadComponent: () =>
+    import('../pages/quiz/quiz.page').then((m) => m.QuizPage)
+},
+{
+  path: 'results',
+  loadComponent: () =>
+    import('../pages/results/results.page').then((m) => m.ResultsPage)
+}
 ];

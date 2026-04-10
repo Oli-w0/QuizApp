@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>QuizFlow</ion-title>
+  <ion-toolbar color="White" class="toolbar">
+    <ion-title>Beat The Quiz Master</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h2>Choose a Category</h2>
 
+  <h2>Choose a Category</h2>
   <div class="category-grid">
     <div
       *ngFor="let category of categories"
@@ -17,4 +17,36 @@
       <p>{{ category.name }}</p>
       </div>
   </div>
+
+  
+    <h4>Select Difficulty</h4>
+    <div class="difficulty-selection">
+      <div
+        *ngFor="let difficulty of difficulties"
+        class="difficulty-select"
+        [class.selected]="selectedDifficulty?.id === difficulty.id"
+        (click)="selectDifficulty(difficulty)"
+      >
+        <p>{{ difficulty.name }}</p>
+      </div>
+    </div>
+  
+
+  <div class="amount-section">
+    <h4>Select Number of Questions</h4>
+    <div class="amount-selection">
+      <div
+        *ngFor="let amount of amounts"
+        class="amount-select"
+        [class.selected]="selectedAmount?.id === amount.id"
+        (click)="selectAmount(amount)"
+      >
+        <p>{{ amount.name }}</p>
+      </div>
+    </div>
+  </div>
+
+    <ion-button class="start-button" color="red" (click)="startQuiz()">Start Quiz</ion-button>
+
+  
   </ion-content>

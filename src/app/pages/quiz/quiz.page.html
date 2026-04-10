@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="White" class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Beat The Quiz Master</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+    <ion-content class="ion-padding">
+      <h2>Quiz Questions</h2>
+      <div class="question-card">
+      <h3 [innerHTML]="getCurrentQuestion().question"></h3>
+      </div>
+
+      <div class="answers">
+        <button
+          *ngFor="let answer of shuffledAnswers"
+          [innerHTML]="answer"
+          (click)="selectAnswer(answer)"
+          [class]="getAnswerColor(answer)"
+          [disabled]="selectedAnswer !==null"
+        >
+        </button>
+      </div>
+      <button class="next-question" *ngIf="selectedAnswer" (click)="nextQuestion()">
+  Next Question
+</button>
+
+    
+    </ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar color="White" class="toolbar">
+        <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Beat The Quiz Master</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+<h2>Quiz Results</h2>
+<ion-content class="ion-padding">
+    <div class="results-card">
+        <h3>Your Score: {{ score }} / {{ total }} % {{score/total*100}}</h3>
+    </div>
+
+    <div class="button-container">
+        <button class="home-button" (click)="goHome()">Go Home</button>
+    </div>
+</ion-content>
