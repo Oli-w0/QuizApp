@@ -1,0 +1,26 @@
+no-history {
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+}
+.toolbar {
+  background-color: lightblue;
+  color: black;
+}
+.history-entry {
+  padding: 20px;
+  background-color: orange;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 50%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.history-entry p {
+  margin: 5px 0;
+  color: black;
+  text-align: center;
+  text-decoration: bold;
+}

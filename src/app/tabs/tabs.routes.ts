@@ -12,9 +12,9 @@ export const routes: Routes = [
           import('../pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'leaderBoard',
-        loadComponent: () =>
-          import('../pages/leaderboard/leaderboard.page').then((m) => m.LeaderBoardPage),
+      path: 'history',
+loadComponent: () =>
+  import('../pages/History/history.page').then((m) => m.HistoryPage)
       },
       {
         path: 'settings',

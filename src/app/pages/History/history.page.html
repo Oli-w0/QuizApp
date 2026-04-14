@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      History Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">History</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="history.length === 0" class="no-history">
+    <p>No quiz history found.</p>
+  </div>
+
+  <div *ngFor="let entry of history" class="history-entry">
+    <p><strong>Category:</strong> {{ entry.category }}</p>
+    <p><strong>Difficulty:</strong> {{ entry.difficulty }}</p>
+    <p><strong>Score:</strong> {{ entry.score }} / {{ entry.total }}</p>
+    <hr />
+  </div>
+</ion-content>

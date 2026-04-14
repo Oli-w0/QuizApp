@@ -62,7 +62,15 @@ export class QuizPage {
     this.currentIndex++;
     this.loadQuestion();
   } else {
-    this.router.navigate(['/results'], { state: { score: this.score, total: this.questions.length } });
+    this.router.navigate(['/results'], { 
+      state: { 
+        score: this.score, 
+        total: this.questions.length,
+        category: this.questions[0].category,
+        difficulty: this.questions[0].difficulty,
+        questions: this.questions
+      } 
+    });
   }
 }
 
