@@ -22,4 +22,7 @@ export class StorageService {
     return history ?? [];
   }
 
+  async clearHistory() {
+    await this.storage.remove('quiz_history');
+  }
 }

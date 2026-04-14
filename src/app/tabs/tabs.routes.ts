@@ -43,5 +43,10 @@ loadComponent: () =>
   path: 'results',
   loadComponent: () =>
     import('../pages/results/results.page').then((m) => m.ResultsPage)
+},
+{
+  path: 'review',
+  loadComponent: () =>
+    import('../pages/review/review.page').then((m) => m.ReviewPage)
 }
 ];

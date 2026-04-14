@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Review</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let question of questions">
+      <ion-label>
+        <h2>{{ question.question }}</h2>
+        <p>Your answer: {{ question.userAnswer }}</p>
+        <p>Correct answer: {{ question.correct_answer }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

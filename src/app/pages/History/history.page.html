@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar class="toolbar" color="white">
     <ion-title>
       History Page
     </ion-title>
@@ -18,9 +18,15 @@
   </div>
 
   <div *ngFor="let entry of history" class="history-entry">
-    <p><strong>Category:</strong> {{ entry.category }}</p>
-    <p><strong>Difficulty:</strong> {{ entry.difficulty }}</p>
-    <p><strong>Score:</strong> {{ entry.score }} / {{ entry.total }}</p>
-    <hr />
+    <ion-card (click)="showQuestionDetails(entry)" button="true">
+      <ion-card-header>
+        <ion-card-title>{{ entry.category }}</ion-card-title>
+        <ion-card-subtitle>{{ entry.difficulty }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Score: {{ entry.score }} / {{ entry.total }}</p>
+        <p>Date: {{ entry.date }}</p>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

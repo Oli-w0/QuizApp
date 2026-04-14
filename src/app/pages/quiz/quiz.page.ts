@@ -46,6 +46,7 @@ export class QuizPage {
 }
   selectAnswer(answer: string) {
   this.selectedAnswer = answer;
+  this.questions[this.currentIndex].userAnswer = answer;
   if (answer === this.getCurrentQuestion().correct_answer) {
     this.score++;
   }

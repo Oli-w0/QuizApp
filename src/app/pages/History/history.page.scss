@@ -1,10 +1,10 @@
-no-history {
+.no-history {
   padding: 10px;
   text-align: center;
   margin-top: 50px;
 }
 .toolbar {
-  background-color: lightblue;
+  background-color: white;
   color: black;
 }
 .history-entry {
@@ -20,7 +20,7 @@ no-history {
 }
 .history-entry p {
   margin: 5px 0;
-  color: black;
+  color: white;
   text-align: center;
   text-decoration: bold;
 }
