@@ -13,11 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
+    <input 
+  type="text"
+  class="search-bar"
+  [(ngModel)]="searchTerm"
+  placeholder="Search by category..."
+/>
+
   <div *ngIf="history.length === 0" class="no-history">
     <p>No quiz history found.</p>
   </div>
 
-  <div *ngFor="let entry of history" class="history-entry">
+  <div *ngFor="let entry of getFilteredHistory()" class="history-entry">
     <ion-card (click)="showQuestionDetails(entry)" button="true">
       <ion-card-header>
         <ion-card-title>{{ entry.category }}</ion-card-title>
@@ -28,5 +35,5 @@
         <p>Date: {{ entry.date }}</p>
       </ion-card-content>
     </ion-card>
-  </div>
+  </div>   
 </ion-content>

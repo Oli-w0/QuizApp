@@ -30,3 +30,24 @@
     justify-content: center;
     align-items: center;
 }
+
+.share-button{
+    gap: 10px;
+    border-radius: 8px;
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.share-icon {
+    width: 50px;
+    height: 50px; 
+    filter: brightness(0) invert(1);
+}

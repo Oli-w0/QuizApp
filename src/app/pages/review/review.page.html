@@ -8,9 +8,9 @@
   <ion-list>
     <ion-item *ngFor="let question of questions">
       <ion-label>
-        <h2>{{ question.question }}</h2>
-        <p>Your answer: {{ question.userAnswer }}</p>
-        <p>Correct answer: {{ question.correct_answer }}</p>
+       <h2 [innerHTML]="question.question"></h2>
+        <p>Your answer: <span [innerHTML]="question.userAnswer"></span></p>
+        <p>Correct answer: <span [innerHTML]="question.correct_answer"></span></p>
       </ion-label>
     </ion-item>
   </ion-list>

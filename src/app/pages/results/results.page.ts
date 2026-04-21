@@ -3,13 +3,15 @@ import { CommonModule } from "@angular/common";
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonButton, IonBackButton } from "@ionic/angular/standalone";
 import { Router } from "@angular/router";
 import { StorageService } from '../../services/storage.service';
+import { Share } from '@capacitor/share';
+
 
 @Component({
   selector: 'app-results',
   templateUrl: './results.page.html',
   styleUrls: ['./results.page.scss'],
   standalone: true,
-    imports: [IonHeader, IonToolbar, IonTitle, IonContent, CommonModule, IonButton, IonButtons, IonBackButton],
+    imports: [IonHeader, IonToolbar, IonTitle, IonContent, CommonModule, IonButtons, IonButton, IonBackButton],
 })
 export class ResultsPage {
   
@@ -19,7 +21,7 @@ category: string = '';
 difficulty: string = '';
 questions: any[] = [];
   
-  constructor(private router: Router, private storageService: StorageService) {
+  constructor(private router: Router, private storageService: StorageService,) {
     const navigation = this.router.getCurrentNavigation();
     const state = navigation?.extras.state as any;
     this.score = state.score;
@@ -43,5 +45,12 @@ async saveResult() {
   difficulty: this.difficulty,
   questions: this.questions
 });
+}
+async shareResults() {
+  await Share.share({
+    title: 'Quiz Results',
+    text: `I scored ${this.score}/${this.total} in the ${this.category} quiz at ${this.difficulty} difficulty! Can you beat my score?`,
+    dialogTitle: 'Share your quiz results'
+  });
 }
 }
