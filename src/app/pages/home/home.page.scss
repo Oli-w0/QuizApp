@@ -1,20 +1,21 @@
 .toolbar {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 .category-grid {
   display: grid;
   color:black;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  background-color: purple;
+  background-color: white;
   margin-top: 16px;
 }
 
 .category-card {
   padding: 5px;
   border-radius: 10px;
-  background-color: orange;
+  background-color: royalblue;
+  color: white;
   opacity: 1.2;
   text-align: center;
   cursor: pointer;
@@ -37,8 +38,8 @@
 .difficulty-select {
   padding: 12px 18px;
   border-radius: 10px;
-  background-color: orange;
-  color: black;
+  background-color: royalblue;
+  color: white;
   cursor: pointer;
   text-align: center;
 
@@ -63,8 +64,8 @@
 
 .amount-select {
   padding: 12px 18px;
-  background-color: orange;
-  color: black;
+  background-color: royalblue;
+  color: white;
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
@@ -76,7 +77,7 @@
   }
 }
 .start-button {
-  margin-top: 50px;
+  margin-top: 40px;
   justify-content: center;
   color: white;
   background-color: red;

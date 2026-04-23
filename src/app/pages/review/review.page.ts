@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonBackButton, IonButtons } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   selector: 'app-review',
   templateUrl: './review.page.html',
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonList, CommonModule, IonItem, IonLabel],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonList, CommonModule, IonItem, IonLabel, IonBackButton, IonButtons  ],
   styleUrls: ['./review.page.scss'],
 })
 export class ReviewPage {

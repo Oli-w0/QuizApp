@@ -37,7 +37,7 @@
 @import '@ionic/angular/css/palettes/dark.system.css';
 
 :root {
-  --ion-background-color: #6a0dad;
+  --ion-background-color: #ffffff;
 }
 
 body,
@@ -46,9 +46,9 @@ ion-router-outlet,
 ion-content,
 .ion-page,
 app-root {
-  background-color: #6a0dad !important;
+  background-color: #ffffff !important;
 }
 
 ion-content {
-  --background: #6a0dad;
+  --background: #ffffff;
 }
