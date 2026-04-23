@@ -20,3 +20,20 @@ h1
     color: white;   
     text-decoration: bold;
 }
+.about-section {
+  margin: 24px 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--ion-color-light);
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--ion-color-medium);
+    margin-bottom: 8px;
+  }
+}
