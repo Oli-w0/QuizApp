@@ -7,14 +7,14 @@
   color:black;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  background-color: black;
+  background-color: purple;
   margin-top: 16px;
 }
 
 .category-card {
   padding: 5px;
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: orange;
   opacity: 1.2;
   text-align: center;
   cursor: pointer;
@@ -37,7 +37,7 @@
 .difficulty-select {
   padding: 12px 18px;
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: orange;
   color: black;
   cursor: pointer;
   text-align: center;
@@ -63,7 +63,7 @@
 
 .amount-select {
   padding: 12px 18px;
-  background-color: lightblue;
+  background-color: orange;
   color: black;
   text-align: center;
   border-radius: 10px;
